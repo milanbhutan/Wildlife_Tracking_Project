@@ -1,18 +1,18 @@
-# UAV_Wildlife_Tracking_Integration
-Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-V4 Software Defined Radio (SDR), and 900 MHz XBee radios.
+# UAV Wildlife Tracking Integration
+Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-SDR Blog V4 Software Defined Radio, and 900 MHz XBee radios.
 
 
 ## Project Overview
-The goal of this project is to integrate a UAV mounted tracking system which can provide distance and heading relative to a VHF beacon emitted from an animal collar. This project builds off a previous team's work who developed the software for reading RSSI using a Raspberry Pi 4 and sending data via XBees but could not fully integrate the overall system. My role focused on . 
+The goal of this project is to integrate a UAV mounted tracking system which can provide distance and heading relative to a VHF beacon emitted from an animal collar. This project builds off a previous team's work who developed the software for reading RSSI using a Raspberry Pi 4 and sending data via XBees to a ground control station (GCS) but could not fully integrate the overall system. My role focused on . 
 
 ## Hardware
 - Raspberry Pi 4:
   - Runs a Python script which calculates RSSI from IQ samples provided by an SDR and sends these RSSI values to a GCS
   - Used a virtual enviroment with libraries such as rtlsdr to interface with the RTL-SDR and pySerial for serial UART communication to XBees
-  - Installed Tailscale VPN on this Rasperry Pi 4 for 
+  - Runs Tailscale VPN to provide remote ssh access from off-campus locations
 
 - 900 MHz Xbee Radios: Configured using Digi XCTU
-- RTL-V4 Software Defined Radio
+- RTL-SDR Blog V4 Software Defined Radio (SDR)
 - 
 ### VHF Transmitter + Tracking System + GCS Block Diagram
 
