@@ -1,12 +1,15 @@
 # UAV_Wildlife_Tracking_Integration
-Working in conjunction with an EE professor, animal scinece professor, and other EE students at Cal Poly SLO to integrate a UAV mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-V4 Software Defined Radio (SDR), and 900 MHz Xbee radios.
+Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-V4 Software Defined Radio (SDR), and 900 MHz XBee radios.
 
 
 ## Project Overview
-The goal of this project is to integrate a UAV mounted tracking system which can provide distance and heading relative to a VHF beacon emitted from an animal collar. This project builds off a previous team's work who developed the software for reading RSSI using a Raspberry Pi 4 and sending data via XBees but could not fully integrate the overall system. My role on the project was to bring my experience with embedded Linux, Xbee radios, electronics and RF to . I also gave weekly presentations explaining why we made certain design choices and outlining future tasks 
+The goal of this project is to integrate a UAV mounted tracking system which can provide distance and heading relative to a VHF beacon emitted from an animal collar. This project builds off a previous team's work who developed the software for reading RSSI using a Raspberry Pi 4 and sending data via XBees but could not fully integrate the overall system. My role focused on . 
 
 ## Hardware
-- Raspberry Pi 4: Runs a Python scripts which calculates RSSI from IQ samples provided by an SDR and sends this RSSI values to a GCS. Used a virtual enviorment with libraries such as rtlsdr to interface with the RTL-SDR and pySerial for serial UART communication to XBees.
+- Raspberry Pi 4:
+  - Runs a Python script which calculates RSSI from IQ samples provided by an SDR and sends these RSSI values to a GCS
+  - Used a virtual enviroment with libraries such as rtlsdr to interface with the RTL-SDR and pySerial for serial UART communication to XBees
+  - Installed Tailscale VPN on this Rasperry Pi 4 for 
 
 - 900 MHz Xbee Radios: Configured using Digi XCTU
 - RTL-V4 Software Defined Radio
@@ -21,7 +24,6 @@ The goal of this project is to integrate a UAV mounted tracking system which can
 
 ### Current Transmitter
 
-
 <img width="491" height="533" alt="image" src="https://github.com/user-attachments/assets/4f1ce704-eeaf-4e55-b41f-e128281ab35a" />
 
 ### Current Tracking System
@@ -33,5 +35,6 @@ The goal of this project is to integrate a UAV mounted tracking system which can
 ## Testing
 
 <img width="557" height="344" alt="image" src="https://github.com/user-attachments/assets/e86a66dc-2572-46bf-9fd2-d311444f45cf" />
-XCTU console showing RSSI values (dBm) recieved from tracking system
+
+XCTU console showing RSSI values (dBm) received from tracking system s
 
