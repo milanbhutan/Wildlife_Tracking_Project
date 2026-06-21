@@ -1,5 +1,5 @@
 # UAV Wildlife Tracking Integration
-Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-SDR Blog V4 Software Defined Radio, and 900 MHz XBee radios.
+Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-SDR Blog V4 Software Defined Radio, and 900 MHz XBee radios. Documentation in progress.
 
 
 ## Project Overview
