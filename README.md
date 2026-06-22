@@ -1,5 +1,5 @@
 # UAV Wildlife Tracking Integration
-Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV-mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-SDR Blog V4 software-defined radio, and 900 MHz XBee radios. Documentation in progress.
+Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV-mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-SDR Blog V4 software-defined radio, and 900 MHz XBee radios.
 
 
 ## Project Overview
@@ -11,11 +11,14 @@ The goal of this project is to integrate a UAV-mounted tracking system which can
   - Used a virtual environment with libraries such as rtlsdr to interface with the RTL-SDR and pySerial for serial UART communication to XBees
   - Runs Tailscale VPN to provide remote SSH access from off-campus locations
 
+- RTL-SDR Blog V4 Software-Defined Radio (SDR)
+  - Reciever-only SDR covering 500 kHz to 1.7 GHz
+  - Recieves the 165 MHz beacon and streams digital IQ samples to the Raspberry Pi over USB
+  
 - 900 MHz XBee Radios:
    - Sends RSSI value computed by the Raspberry Pi 4
    - Configured using Digi XCTU
 
-- RTL-SDR Blog V4 Software-Defined Radio (SDR)
   
 ### VHF Transmitter + Tracking System + GCS Block Diagram
 
@@ -32,8 +35,6 @@ The goal of this project is to integrate a UAV-mounted tracking system which can
 ### Current Tracking System
 
 <img width="2880" height="2160" alt="image" src="https://github.com/user-attachments/assets/466d59eb-768f-4b59-8c9a-f447b3aca25f" />
-
-## Software Integration
 
 ## Testing
 
