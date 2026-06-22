@@ -1,19 +1,22 @@
 # UAV Wildlife Tracking Integration
-Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-SDR Blog V4 Software Defined Radio, and 900 MHz XBee radios. Documentation in progress.
+Working in conjunction with an EE professor, animal science professor, and other EE students at Cal Poly SLO to integrate a UAV-mounted system for tracking a VHF beacon emitted from an animal collar using a Raspberry Pi 4, RTL-SDR Blog V4 software-defined radio, and 900 MHz XBee radios. Documentation in progress.
 
 
 ## Project Overview
-The goal of this project is to integrate a UAV mounted tracking system which can provide distance and heading relative to a VHF beacon emitted from an animal collar. This project builds off a previous team's work who developed the software for reading RSSI using a Raspberry Pi 4 and sending data via XBees to a ground control station (GCS) but could not fully integrate the overall system. My role focused on . 
+The goal of this project is to integrate a UAV-mounted tracking system which can provide distance and heading relative to a VHF beacon emitted from an animal collar. The completed prototype of the tracking system consists of a test VHF transmitter, a Raspberry Pi-based tracking system and laptop-based ground control station (GCS). The tracking system works by using a software-defined radio (SDR) to receive a 165 MHz beacon emitted from a VHF transmitter. The SDR sends digital IQ samples to a Raspberry Pi where a Python script computes RSSI from a window of samples. Once RSSI is computed the digital value is transmitted via 900 MHz XBee digital radio to a GCS which will then use the RSSI to compute distance using the Friis transmission equation. Currently, the system only tracks distance between the VHF transmitter and the receiver but future work will involve using a phased antenna array to obtain heading as well. This project builds on a previous team's work who developed the Python script for calculating and transmitting RSSI but could not fully integrate the overall system. 
 
 ## Hardware
 - Raspberry Pi 4:
-  - Runs a Python script which calculates RSSI from IQ samples provided by an SDR and sends these RSSI values to a GCS
-  - Used a virtual enviroment with libraries such as rtlsdr to interface with the RTL-SDR and pySerial for serial UART communication to XBees
-  - Runs Tailscale VPN to provide remote ssh access from off-campus locations
+  - Runs a Python script that calculates RSSI from IQ samples provided by an SDR and sends these RSSI values to a GCS
+  - Used a virtual environment with libraries such as rtlsdr to interface with the RTL-SDR and pySerial for serial UART communication to XBees
+  - Runs Tailscale VPN to provide remote SSH access from off-campus locations
 
-- 900 MHz Xbee Radios: Configured using Digi XCTU
-- RTL-SDR Blog V4 Software Defined Radio (SDR)
-- 
+- 900 MHz XBee Radios:
+   - Sends RSSI value computed by the Raspberry Pi 4
+   - Configured using Digi XCTU
+
+- RTL-SDR Blog V4 Software-Defined Radio (SDR)
+  
 ### VHF Transmitter + Tracking System + GCS Block Diagram
 
 <img width="892" height="556" alt="image" src="https://github.com/user-attachments/assets/c3577b0b-bd3e-4095-ab68-a25e59d09b93" />
@@ -36,5 +39,5 @@ The goal of this project is to integrate a UAV mounted tracking system which can
 
 <img width="557" height="344" alt="image" src="https://github.com/user-attachments/assets/e86a66dc-2572-46bf-9fd2-d311444f45cf" />
 
-XCTU console showing RSSI values (dBm) received from tracking system s
+XCTU console showing RSSI values (dBm) received from the tracking system via XBee radios
 
