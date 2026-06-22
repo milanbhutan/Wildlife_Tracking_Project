@@ -12,8 +12,8 @@ The goal of this project is to integrate a UAV-mounted tracking system which can
   - Runs Tailscale VPN to provide remote SSH access from off-campus locations
 
 - RTL-SDR Blog V4 Software-Defined Radio (SDR)
-  - Reciever-only SDR covering 500 kHz to 1.7 GHz
-  - Recieves the 165 MHz beacon and streams digital IQ samples to the Raspberry Pi over USB
+  - Receiver-only SDR covering 500 kHz to 1.7 GHz
+  - Receives the 165 MHz beacon and streams digital IQ samples to the Raspberry Pi over USB
   
 - 900 MHz XBee Radios:
    - Sends RSSI value computed by the Raspberry Pi 4
